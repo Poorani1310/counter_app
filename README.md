@@ -12,3 +12,4 @@ Counter_app
 
 • Used conditional rendering to show messages such as: “Minimum count reached” when count is below zero, otherwise the counter value is returned. 
 
+Project Link: https://counterapp1-tau.vercel.app/
