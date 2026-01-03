@@ -1,24 +1,27 @@
-import logo from './logo.svg';
+import Counter from './components/Counter';
 import './App.css';
+import { useState } from 'react';
 
 function App() {
+  
+  const [counter, setCounter] = useState(0);
+
+  const inc_cntr = () => {
+    setCounter(counter + 1 );
+  }
+  
+  const dec_cntr = () => {
+    setCounter(counter - 1 );
+  }
+  
+  const reset_cntr = () => {
+    setCounter(0);
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <div className='App'>
+      <Counter counter={counter} inc_cntr={inc_cntr} dec_cntr={dec_cntr} reset_cntr={reset_cntr}/>
+    </div>    
   );
 }
 
